@@ -25,4 +25,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
+
+-- My Custom keymaps
+vim.keymap.set("i", "<C-c>", "<Esc>")
+
 -- vim: ts=2 sts=2 sw=2 et
