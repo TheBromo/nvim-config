@@ -133,19 +133,11 @@ require('lazy').setup({
     priority = 1000,
     lazy = false,
     config = function()
-      require("gruvbox").setup({
-        terminal_colors = true,
-        italic ={
-          strings = false,
-          folds = true,
-          comments = true,
-          emphasis = true,
-          operators = false
-        },
-        transparent_mode = false,
-        contrast = "hard",
-      })
-      vim.cmd.colorscheme 'gruvbox'
+      require('onedark').setup {
+        -- Set a style preset. 'dark' is default.
+        style = 'dark', -- dark, darker, cool, deep, warm, warmer, light
+      }
+      require('onedark').load()
     end,
   },
 
@@ -156,7 +148,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'gruvbox_dark',
+        theme = 'auto',
         component_separators = '|',
         section_separators = '',
       },
